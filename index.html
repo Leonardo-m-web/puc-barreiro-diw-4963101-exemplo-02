@@ -1,39 +1,177 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo Flexbox</title>
     <style>
-        *{
+        * {
             font-size: 16px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        .container{
+
+        .cabecalho {
             border: 1px solid rgb(215, 237, 245);
-            height: 30rem;
-            box-shadow: .5rem .5rem .3rem .01rem rgb(215, 237, 245) ;
+            height: 5rem;
+            /*box-shadow: .5rem .5rem .3rem .01rem rgb(215, 237, 245) ;*/
             display: flex;
-            justify-content: center;
+            flex-wrap: wrap;
+            justify-content: start;
+            align-content: start;
         }
-        .item{
+
+        .item {
             background-color: red;
             color: white;
             font-weight: bold;
             padding: 1rem;
-            margin: 1rem;
+            margin: .1rem;
             width: 5rem;
-            height: 5rem;
+            height: 3rem;
             border-radius: .5rem;
         }
-        
+
+        .container {
+            display: flex;
+        }
+
+        .logo {
+            flex-grow: 1;
+        }
+
+        .titulo {
+            flex-grow: 14;
+        }
+
+        .menu-lateral {
+
+            width: 15rem;
+            height: 30rem;
+            padding-top: 1rem;
+        }
+
+        .parte-principal {
+            /*border: 3px dashed blue;*/
+            display: flex;
+            flex-wrap: wrap;
+            flex-grow: 1;
+        }
+
+        .tile {
+            background-color: #c7c5c5;
+            padding: 1rem;
+            margin-bottom: .5rem;
+            color: blue;
+            border-radius: .3rem;
+        }
+
+        .tile:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            width: 15rem;
+        }
+
+        .cartao {
+            width: 15rem;
+            border: 1px solid #c7c5c5;
+            height: 22rem;
+            box-shadow: .5rem .5rem .3rem .01rem #c7c5c5;
+            margin: 1rem;
+        }
+
+        .descricao {
+            padding: 1rem;
+        }
+
+        .preco {
+            padding: 1rem;
+            font-weight: bolder;
+            text-align: right;
+        }
     </style>
 </head>
+
 <body>
+    <div class="cabecalho">
+        <div class="item logo">Logo</div>
+        <div class="item titulo">Titulo</div>
+        <div class="item menu-sanduiches">Menu</div>
+
+    </div>
     <div class="container">
-        <div class="item">item 01</div>
-        <div class="item">item 02</div>
-        <div class="item">item 03</div>
+        <nav class="menu-lateral">
+            <a href="https://www.pucminas.br">
+                <div class="tile">PUCminas</div>
+            </a>
+            <a href="https://www.primevideo.com/">
+                <div class="tile">Prime Video</div>
+            </a>
+            <a href="https://www.google.com/">
+                <div class="tile">Google</div>
+            </a>
+            <a href="https://www.mcdonalds.com.br/">
+                <div class="tile">MCdonalds</div>
+            </a>
+        </nav>
+        <main class="parte-principal">
+            <div class="cartao">
+                <div class="imagem">
+                    <img src="sanduiche.png">
+                </div>
+                <div class="descricao">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, mollitia? Consequuntur voluptatem
+                    et provident dolorem.
+                </div>
+                <div class="preco">
+                    R$49,99
+                </div>
+            </div>    
+                <div class="cartao">
+                    <div class="imagem">
+                        <img src="sanduiche.png">
+                    </div>
+                    <div class="descricao">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, mollitia? Consequuntur
+                        voluptatem et provident dolorem.
+                    </div>
+                    <div class="preco">
+                        R$49,99
+                    </div>
+                </div>
+                <div class="cartao">
+                    <div class="imagem">
+                        <img src="sanduiche.png">
+                    </div>
+                    <div class="descricao">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, mollitia? Consequuntur
+                        voluptatem et provident dolorem.
+                    </div>
+                    <div class="preco">
+                        R$49,99
+                    </div>
+                </div>
+                <div class="cartao">
+                    <div class="imagem">
+                        <img src="sanduiche.png">
+                    </div>
+                    <div class="descricao">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, mollitia? Consequuntur
+                        voluptatem et provident dolorem.
+                    </div>
+                    <div class="preco">
+                        R$49,99
+                    </div>
+                </div>
+        </main>
     </div>
 </body>
+
 </html>
